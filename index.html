@@ -6,9 +6,12 @@
 
     Hi! Welcome to our source code.
 
-    This dashboard uses code developed by the Digital Analytics Program, a US government team inside the General Services Administration, an independent federal agency. It was built largely by 18F, another GSA team.
+    This dashboard uses code developed by the Digital Analytics Program, a US government team inside the General Services
+    Administration, an independent federal agency. It was built largely by 18F, another GSA team.
 
-    Beginning in December 2014, the City of Philadelphia's Office of Innovation and Technology has been working to integrate city-wide web analytics in the same way. Much like the our compatriots at the federal level, it is a work in progress, with over 56 departments to coordinate
+    Beginning in December 2014, the City of Philadelphia's Office of Innovation and Technology has been working to integrate
+    city-wide web analytics in the same way. Much like the our compatriots at the federal level, it is a work in progress, with
+    over 56 departments to coordinate
 
 
     For a detailed tech breakdown of how 18F built this site:
@@ -16,7 +19,8 @@
 
     And read the City of Philadelphia's web reporting initiative here:
 
-     In part, we'll be using these analytics to help inform our iterative, public effort to redesign the city's website to better serve the needs of residents. Follow our progress at: 
+     In part, we'll be using these analytics to help inform our iterative, public effort to redesign the city's
+    website to better serve the needs of residents. Follow our progress at:
      http://alpha.phila.gov
 
 
@@ -25,13 +29,6 @@
     Frontend static site: https://github.com/CityofPhiladelphia/analytics.phila.gov
     Backend data reporting: https://github.com/CityofPhiladelphia/analytics-reporter
 
-  ==========================================
-    TODO:
-    - Review above copy
-    - Create share OG share image, update URL
-    - Add Alpha patterns
-    - Add (replace) filtering for overly-trafficked apps/pages in index.js
-    - Update Tw handles in OG/meta tags above
     -->
 
     <meta charset="utf-8">
@@ -43,8 +40,8 @@
     <meta name="twitter:creator" content="@usgsa">
     <meta property="og:type" content="website" />
 
-    <meta property="og:url" content="https://analytics.phila.gov" />
-    <link rel="canonical" href="https://analytics.phila.gov" />
+    <meta property="og:url" content="http://analytics.phila.gov" />
+    <link rel="canonical" href="http://analytics.phila.gov" />
 
     <title>analytics.phila.gov | The City of Philadelphia's web traffic.</title>
     <meta property="og:title" content="analytics.phila.gov | The City of Philadelphia's web traffic." />
@@ -54,7 +51,7 @@
     <meta property="og:description" content="Official data on web traffic to the City of Philadelphia's government websites. Published by the Office of Innovation and Technology." />
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="https://analytics.usa.gov/images/share-image.png" />
+    <meta property="og:image" content="http://analytics.phila.gov/images/share-image.png" />
 
 
 
@@ -101,7 +98,7 @@
       <div id="main_data">
         <section id="realtime"
           data-block="realtime"
-          data-source="https://s3.amazonaws.com/philagovanalytics///realtime.json"
+          data-source="https://s3.amazonaws.com/analytics.phila.gov///realtime.json"
           data-refresh="15">
           <h2 id="current_visitors" class="data">...</h2>
           <div class="chart_subtitle">people on government websites now</div>
@@ -113,7 +110,7 @@
         </section>
         <section id="time_series"
           data-block="today"
-          data-source="https://s3.amazonaws.com/philagovanalytics///today.json"
+          data-source="https://s3.amazonaws.com/analytics.phila.gov///today.json"
           data-refresh="15">
           <svg class="data time-series">
           </svg>
@@ -129,7 +126,7 @@
 
         <section id="devices" class="three_column"
           data-block="devices"
-          data-source="https://s3.amazonaws.com/philagovanalytics///devices.json">
+          data-source="https://s3.amazonaws.com/analytics.phila.gov///devices.json">
           <h4>Devices</h4>
           <figure id="chart_device_types">
             <div class="data bar-chart">
@@ -142,14 +139,14 @@
 
           <figure id="chart_browsers"
             data-block="browsers"
-            data-source="https://s3.amazonaws.com/philagovanalytics///browsers.json">
+            data-source="https://s3.amazonaws.com/analytics.phila.gov///browsers.json">
             <div class="data bar-chart">
             </div>
           </figure>
 
           <figure id="chart_ie"
             data-block="ie"
-            data-source="https://s3.amazonaws.com/philagovanalytics///ie.json">
+            data-source="https://s3.amazonaws.com/analytics.phila.gov///ie.json">
             <h4>Internet Explorer</h4>
             <div class="data bar-chart">
             </div>
@@ -161,14 +158,14 @@
 
           <figure id="chart_os"
             data-block="os"
-            data-source="https://s3.amazonaws.com/philagovanalytics///os.json">
+            data-source="https://s3.amazonaws.com/analytics.phila.gov///os.json">
             <div class="data bar-chart">
             </div>
           </figure>
 
           <figure id="chart_windows"
             data-block="windows"
-            data-source="https://s3.amazonaws.com/philagovanalytics///windows.json">
+            data-source="https://s3.amazonaws.com/analytics.phila.gov///windows.json">
             <h4>Windows</h4>
             <div class="data bar-chart">
             </div>
@@ -189,7 +186,7 @@
 
           <figure class="top-pages" id="top-pages-realtime" role="tabpanel"
             data-block="top-pages-realtime"
-            data-source="https://s3.amazonaws.com/philagovanalytics///top-pages-realtime.json"
+            data-source="https://s3.amazonaws.com/analytics.phila.gov///top-pages-realtime.json"
             data-refresh="15">
             <h5><strong>Pages</strong><br/>
             <em>People on a single, specific government page now.</em></h5>
@@ -199,7 +196,7 @@
 
           <figure class="top-pages" id="top-pages-7-days" role="tabpanel"
             data-block="top-pages"
-            data-source="https://s3.amazonaws.com/philagovanalytics///top-domains-7-days.json">
+            data-source="https://s3.amazonaws.com/analytics.phila.gov///top-domains-7-days.json">
             <h5><strong>Domains</strong><br/>
             <em>Total visits over the last week to government domains, which includes traffic to all pages within that domain.</em></h5>
             <div class="data bar-chart">
@@ -208,7 +205,7 @@
 
           <figure class="top-pages" id="top-pages-30-days" role="tabpanel"
             data-block="top-pages"
-            data-source="https://s3.amazonaws.com/philagovanalytics///top-domains-30-days.json">
+            data-source="https://s3.amazonaws.com/analytics.phila.gov///top-domains-30-days.json">
             <h5><strong>Domains</strong><br/>
               <em>Total visits over the last month to government domains, which includes traffic to all pages within that domain.</em></h5>
             <div class="data bar-chart">
@@ -250,52 +247,52 @@
 
         <ul>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///realtime.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///realtime.json">
               People online right now</a>
             (Updated every minute)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///today.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///today.json">
               Visits every hour today</a>
             (Updated every hour)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///devices.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///devices.json">
               Visits by desktop/mobile/tablet devices over 90 days</a>
             (Updated every day)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///os.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///os.json">
               Visits broken down by Operating System over 90 days</a>
             (Updated every day)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///windows.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///windows.json">
               Visits broken down by Windows version over 90 days</a>
             (Updated every day)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///browsers.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///browsers.json">
               Visits broken down by browser over 90 days</a>
             (Updated every day)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///ie.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///ie.json">
               Visits broken down by Internet Explorer version over 90 days</a>
             (Updated every day)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///top-pages-realtime.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///top-pages-realtime.json">
               Top 20 pages, ranked by visitors online now</a>
             (Updated every minute)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///top-domains-7-days.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///top-domains-7-days.json">
               Top 20 domains, ranked by visits over 7 days</a>
             (Updated every day)
           </li>
           <li>
-            <a href="https://s3.amazonaws.com/philagovanalytics///top-domains-30-days.json">
+            <a href="https://s3.amazonaws.com/analytics.phila.gov///top-domains-30-days.json">
               Top 20 domains, ranked by visits over 30 days</a>
             (Updated every day)
           </li>
