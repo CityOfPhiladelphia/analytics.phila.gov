@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
 
     <!--
 
@@ -34,8 +35,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <link rel="stylesheet" href="/css/public_analytics.css">
-
     <meta name="twitter:site" content="@philadelphiagov">
     <meta name="twitter:creator" content="@philadelphiagov">
     <meta property="og:type" content="website" />
@@ -58,28 +57,57 @@
     <![endif]-->
     <script src="/js/vendor/d3.v3.min.js"></script>
     <script src="/js/vendor/q.min.js"></script>
+
+    <!-- PUT A LITTLE STEEZ ON IT -->
+    <link rel="stylesheet" href="/css/public_analytics.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!--pattern stylesheet includes foundation css -->
+    <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.5.0/css/patterns.css">
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js?ver=2.8.3'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Google Tag Manager [phila.gov] -->
-    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC6CR2"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MC6CR2');</script>
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC6CR2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MC6CR2');
+    </script>
     <!-- End Google Tag Manager -->
-    <header id="usa_dot_gov_header">
-      <div class="header_container">
-        <h1>analytics<a href="http://www.phila.gov">.phila.gov</a></h1>
-        <a id="about" href="#explanation">About this site</a>
-      </div>
-      <div id="color_bar"></div>
-    </header>
 
-    <div class="container">
+    <div class="full" id="application">
+        <header class="site-header app" role="banner">
+          <div class="row">
+            <div class="small-24 medium-24 column">
+              <a href="http://alpha.phila.gov"><img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale left" alt="City of Philadelphia"></a>
+
+              <h1 class="page-title"><a href="#">analytics<a href="http://www.phila.gov">.phila.gov</a></h1>
+              <a id="about" href="#explanation" class="right">About this site</a>
+            </div>
+          </div>
+        </header>
+        <div class="row">
+          <div class="small-24 columns">
+            <div class="divider"></div>
+          </div>
+        <div class="container">
       <!--
       JavaScript block hooks look for any element with both data-block and
       data-source attributes:
@@ -101,234 +129,255 @@
       </section>
       -->
 
-      <div id="main_data">
-        <section id="realtime"
-          data-block="realtime"
-          data-source="https://s3.amazonaws.com/analytics.phila.gov/data/realtime.json"
-          data-refresh="15">
-          <h2 id="current_visitors" class="data">...</h2>
-          <div class="chart_subtitle">people on government websites now</div>
-        </section>
+            <div id="main_data">
+                <section id="realtime" data-block="realtime" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/realtime.json" data-refresh="15">
+                    <h2 id="current_visitors" class="data">...</h2>
+                    <div class="chart_subtitle">people on city websites now</div>
+                </section>
+                <section class="section_headline visits_today">
+                    <h3>Visits Today</h3>
+                    <h4>Eastern Time</h4>
+                </section>
+                <section id="time_series" data-block="today" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/today.json" data-refresh="15">
+                    <svg class="data time-series">
+                    </svg>
+                </section>
 
-        <section class="section_headline visits_today">
-          <h3>Visits Today</h3>
-          <h4>Eastern Time</h4>
-        </section>
-        <section id="time_series"
-          data-block="today"
-          data-source="https://s3.amazonaws.com/analytics.phila.gov/data/today.json"
-          data-refresh="15">
-          <svg class="data time-series">
-          </svg>
-        </section>
+<!--
+                <section class="section_headline">
+                    <h3>Visits in the Past 90 Days</h3>
+                </section>
+-->
 
-        <section class="section_headline">
-          <h3>Visits in the Past 90 Days</h3>
-        </section>
+                <section class="section_subheadline">
+                    There were <span id="total_visitors" class="data">...</span> visits over the past 90 days.
+                </section>
 
-        <section class="section_subheadline">
-          There were <span id="total_visitors" class="data">...</span> visits over the past 90 days.
-        </section>
+                <section id="devices" class="three_column" data-block="devices" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/devices.json">
+                    <h4>Devices</h4>
+                    <figure id="chart_device_types">
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
+                </section>
 
-        <section id="devices" class="three_column"
-          data-block="devices"
-          data-source="https://s3.amazonaws.com/analytics.phila.gov/data/devices.json">
-          <h4>Devices</h4>
-          <figure id="chart_device_types">
-            <div class="data bar-chart">
+                <section id="browsers" class="three_column">
+                    <h4>Browsers</h4>
+
+                    <figure id="chart_browsers" data-block="browsers" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/browsers.json">
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
+
+                    <figure id="chart_ie" data-block="ie" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/ie.json">
+                        <h4>Internet Explorer</h4>
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
+                </section>
+
+                <section id="operating_systems" class="three_column">
+                    <h4>Operating Systems</h4>
+
+                    <figure id="chart_os" data-block="os" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/os.json">
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
+
+                    <figure id="chart_windows" data-block="windows" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/windows.json">
+                        <h4>Windows</h4>
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
+                </section>
             </div>
-          </figure>
-        </section>
 
-        <section id="browsers" class="three_column">
-          <h4>Browsers</h4>
+            <div id="secondary_data">
+                <section id="top_100_table">
 
-          <figure id="chart_browsers"
-            data-block="browsers"
-            data-source="https://s3.amazonaws.com/analytics.phila.gov/data/browsers.json">
-            <div class="data bar-chart">
-            </div>
-          </figure>
+                    <!-- see: http://heydonworks.com/practical_aria_examples/ -->
+                    <h3>Top 20</h3>
+                    <ul class="pills" role="tablist">
+                        <li><a role="tab" aria-selected="true" href="#top-pages-realtime">Now</a>
+                        </li>
+                        <li><a role="tab" href="#top-pages-7-days">7 Days</a>
+                        </li>
+                        <li><a role="tab" href="#top-pages-30-days">30 Days</a>
+                        </li>
+                    </ul>
 
-          <figure id="chart_ie"
-            data-block="ie"
-            data-source="https://s3.amazonaws.com/analytics.phila.gov/data/ie.json">
-            <h4>Internet Explorer</h4>
-            <div class="data bar-chart">
-            </div>
-          </figure>
-        </section>
+                    <figure class="top-pages" id="top-pages-realtime" role="tabpanel" data-block="top-pages-realtime" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/top-pages-realtime.json" data-refresh="15">
+                        <h5><strong>Pages</strong><br/>
+            <span class="small-text">People on a single, specific government page now.</span></h5>
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
 
-        <section id="operating_systems" class="three_column">
-          <h4>Operating Systems</h4>
-
-          <figure id="chart_os"
-            data-block="os"
-            data-source="https://s3.amazonaws.com/analytics.phila.gov/data/os.json">
-            <div class="data bar-chart">
-            </div>
-          </figure>
-
-          <figure id="chart_windows"
-            data-block="windows"
-            data-source="https://s3.amazonaws.com/analytics.phila.gov/data/windows.json">
-            <h4>Windows</h4>
-            <div class="data bar-chart">
-            </div>
-          </figure>
-        </section>
-      </div>
-
-      <div id="secondary_data">
-        <section id="top_100_table">
-
-          <!-- see: http://heydonworks.com/practical_aria_examples/ -->
-          <h3>Top 20</h3>
-          <ul class="pills" role="tablist">
-            <li><a role="tab" aria-selected="true" href="#top-pages-realtime">Now</a></li>
-            <li><a role="tab" href="#top-pages-7-days">7 Days</a></li>
-            <li><a role="tab" href="#top-pages-30-days">30 Days</a></li>
-          </ul>
-
-          <figure class="top-pages" id="top-pages-realtime" role="tabpanel"
-            data-block="top-pages-realtime"
-            data-source="https://s3.amazonaws.com/analytics.phila.gov/data/top-pages-realtime.json"
-            data-refresh="15">
-            <h5><strong>Pages</strong><br/>
-            <em>People on a single, specific government page now.</em></h5>
-            <div class="data bar-chart">
-            </div>
-          </figure>
-
-          <figure class="top-pages" id="top-pages-7-days" role="tabpanel"
-            data-block="top-pages"
-            data-source="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-7-days.json">
-            <h5><strong>Domains</strong><br/>
+                    <figure class="top-pages" id="top-pages-7-days" role="tabpanel" data-block="top-pages" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-7-days.json">
+                        <h5><strong>Domains</strong><br/>
             <em>Total visits over the last week to government domains, which includes traffic to all pages within that domain.</em></h5>
-            <div class="data bar-chart">
-            </div>
-          </figure>
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
 
-          <figure class="top-pages" id="top-pages-30-days" role="tabpanel"
-            data-block="top-pages"
-            data-source="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-30-days.json">
-            <h5><strong>Domains</strong><br/>
+                    <figure class="top-pages" id="top-pages-30-days" role="tabpanel" data-block="top-pages" data-source="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-30-days.json">
+                        <h5><strong>Domains</strong><br/>
               <em>Total visits over the last month to government domains, which includes traffic to all pages within that domain.</em></h5>
-            <div class="data bar-chart">
+                        <div class="data bar-chart">
+                        </div>
+                    </figure>
+
+                </section>
             </div>
-          </figure>
 
-        </section>
-      </div>
+            <section id="explanation">
+                <h3>About this Site</h3>
+                <p>
+                    This data provides a window into how people are interacting with the government online. The data comes from a unified Google Analytics account for City of Philadelphia government agencies. This program helps government agencies understand how people find, access, and use government services online. The program <a href="https://www.digitalgov.gov/services/dap/common-questions-about-dap-faq/#part-4">does not track individuals</a>, and <a href="https://support.google.com/analytics/answer/2763052?hl=en">anonymizes the IP addresses</a> of visitors.
+                </p>
 
-      <section id="explanation">
-        <h3>About this Site</h3>
-        <p>
-          This data provides a window into how people are interacting with the government online. The data comes from a unified Google Analytics account for City of Philadelphia government agencies. This program helps government agencies understand how people find, access, and use government services online. The program <a href="https://www.digitalgov.gov/services/dap/common-questions-about-dap-faq/#part-4">does not track individuals</a>, and <a href="https://support.google.com/analytics/answer/2763052?hl=en">anonymizes the IP addresses</a> of visitors.
-        </p>
+                <p>
+                    Not every city agency website is represented in this data. Currently, the Office of Innovation and technology collects web traffic from almost <a href=""> [n] city sites</a>, including every [department], out of <a href="">about [n] domains</a> total. We continue to pursue and add more sites frequently; to add your site, <a href="mailto:data@phila.gov">email Data Services in the Office of Innovation and Technology</a>.
+                </p>
 
-        <p>
-          Not every city agency website is represented in this data. Currently, the Office of Innovation and technology collects web traffic from almost <a href=""> [n] city sites</a>, including every [department], out of <a href="">about [n] domains</a> total. We continue to pursue and add more sites frequently; to add your site, <a href="mailto:data@phila.gov">email Data Services in the Office of Innovation and Technology</a>.
-        </p>
+                <p>
+                    <strong>Top 20 data:</strong> "Now" data includes traffic to a specific, single page&mdash;whereas "7 Days" and "30 Days" data includes traffic to a domain <strong>and</strong> all pages within that domain.
+                </p>
 
-        <p>
-          <strong>Top 20 data:</strong> "Now" data includes traffic to a specific, single page&mdash;whereas "7 Days" and "30 Days" data includes traffic to a domain <strong>and</strong> all pages within that domain.
-        </p>
+                <p>
+                    This open source project is in the public domain, which means that this website and its data are free for you to use without restriction. You can find the <a href="https://github.com/CityofPhiladelphia/analytics.phila.gov">code for this website</a> and the <a href="https://github.com/CityofPhiladelphia/analytics-reporter">code behind the data collection</a> on GitHub.
+                </p>
 
-        <p>
-          This open source project is in the public domain, which means that this website and its data are free for you to use without restriction. You can find the <a href="https://github.com/CityofPhiladelphia/analytics.phila.gov">code for this website</a> and the <a href="https://github.com/CityofPhiladelphia/analytics-reporter">code behind the data collection</a> on GitHub.
-        </p>
+                <p>
+                    We plan to expand the data made available here. If you have any suggestions, or spot any issues or bugs, please <a href="https://github.com/CityofPhiladelphia/analytics.phila.gov/issues">open an issue on GitHub</a> or contact the <a href="mailto:data@phila.gov">Office of Innovation and Technology</a>.
+                </p>
+            </section>
 
-        <p>
-          We plan to expand the data made available here. If you have any suggestions, or spot any issues or bugs, please <a href="https://github.com/CityofPhiladelphia/analytics.phila.gov/issues">open an issue on GitHub</a> or contact the <a href="mailto:data@phila.gov">Office of Innovation and Technology</a>.
-        </p>
-      </section>
+            <section id="data_download">
+                <h3>Download the Data</h3>
 
-      <section id="data_download">
-        <h3>Download the Data</h3>
+                <p>
+                    You can download the data that powers the charts above, in JSON format.
+                </p>
 
-        <p>
-          You can download the data that powers the charts above, in JSON format.
-        </p>
+                <ul>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/realtime.json">
+              People online right now</a> (Updated every minute)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/today.json">
+              Visits every hour today</a> (Updated every hour)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/devices.json">
+              Visits by desktop/mobile/tablet devices over 90 days</a> (Updated every day)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/os.json">
+              Visits broken down by Operating System over 90 days</a> (Updated every day)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/windows.json">
+              Visits broken down by Windows version over 90 days</a> (Updated every day)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/browsers.json">
+              Visits broken down by browser over 90 days</a> (Updated every day)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/ie.json">
+              Visits broken down by Internet Explorer version over 90 days</a> (Updated every day)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/top-pages-realtime.json">
+              Top 20 pages, ranked by visitors online now</a> (Updated every minute)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-7-days.json">
+              Top 20 domains, ranked by visits over 7 days</a> (Updated every day)
+                    </li>
+                    <li>
+                        <a href="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-30-days.json">
+              Top 20 domains, ranked by visits over 30 days</a> (Updated every day)
+                    </li>
+                </ul>
+            </section>
 
-        <ul>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/realtime.json">
-              People online right now</a>
-            (Updated every minute)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/today.json">
-              Visits every hour today</a>
-            (Updated every hour)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/devices.json">
-              Visits by desktop/mobile/tablet devices over 90 days</a>
-            (Updated every day)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/os.json">
-              Visits broken down by Operating System over 90 days</a>
-            (Updated every day)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/windows.json">
-              Visits broken down by Windows version over 90 days</a>
-            (Updated every day)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/browsers.json">
-              Visits broken down by browser over 90 days</a>
-            (Updated every day)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/ie.json">
-              Visits broken down by Internet Explorer version over 90 days</a>
-            (Updated every day)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/top-pages-realtime.json">
-              Top 20 pages, ranked by visitors online now</a>
-            (Updated every minute)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-7-days.json">
-              Top 20 domains, ranked by visits over 7 days</a>
-            (Updated every day)
-          </li>
-          <li>
-            <a href="https://s3.amazonaws.com/analytics.phila.gov/data/top-domains-30-days.json">
-              Top 20 domains, ranked by visits over 30 days</a>
-            (Updated every day)
-          </li>
-        </ul>
-      </section>
-
-    </div>
-  </body>
+        </div>
+</body>
 
 
-  <!--
+<!--
     IE detection, used to guide console formatting in subsequent include.
   -->
-  <script type="text/javascript">window._ie9 = false;</script>
+<script type="text/javascript">
+    window._ie9 = false;
+</script>
 
-  <!--[if IE 9 ]>
+<!--[if IE 9 ]>
     <script type="text/javascript">window._ie9 = true;</script>
   <![endif]-->
 
-  <!--
+<!--
    IE10 JS targeting: https://stackoverflow.com/a/17099988
    IE11 JS targeting: https://stackoverflow.com/a/17447695
   -->
-  <script type="text/javascript">
+<script type="text/javascript">
     window._ie10 = ("onpropertychange" in document && !!window.matchMedia);
     window._ie11 = !!navigator.userAgent.match(/Trident\/7.0; rv 11/);
     window._ie = window._ie9 || window._ie10 || window._ie11;
-  </script>
+</script>
 
-  <script src="/js/index.js"></script>
+<script src="/js/index.js"></script>
 
-  <!--  <script id="_fed_an_ua_tag" src="https://analytics.usa.gov/dap/dap.min.js"></script>  -->
+ <!-- Begin footer -->
+    <footer class="site-footer" role="contentinfo">
+<!-- I AM A FATTY FOOTER, WAITING FOR HAPPY LINKS -->
+<!--
+      <section class="fat">
+        <div class="row">
+          <div class="large-8 columns">
+            <h1>Government</h1>
+            <nav>
+              <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="large-16 columns">
+            <h1>Browse alpha.phila.gov</h1>
+            <nav>
+              <ul class="columns-2">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+-->
+      <div class="row classic">
+        <div class="large-6 columns">
+          <a href="#">Feedback</a>
+        </div>
+        <div class="large-12 columns">
+          <nav>
+            <ul class="inline-list">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/js/foundation.min.js"></script>
+    <script src="//cityofphiladelphia.github.io/patterns/dist/0.5.0/js/patterns.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>
