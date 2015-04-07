@@ -12,3 +12,5 @@ _site
 /*.gz
 /*.map
 /work
+
+sass/patterns.css
