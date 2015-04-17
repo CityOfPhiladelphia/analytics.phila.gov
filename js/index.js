@@ -5,14 +5,14 @@
   // that happens to have trouble keeping permalinks.
   var exceptions = {
     // for the Now tab
-    "default.aspx": "http://property.phila.gov/",
-    "revenue/realestatetax/default.aspx": "http://www.phila.gov/revenue/realestatetax/default.aspx",
-    "pages/default.aspx": "http://phila.gov/pages/default.aspx",
-    "paymentcenter/gateway1/initiatepurchase.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
-    "paymentcenter/accountlookup/default.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
-    "residents/index.html": "http://phila.gov/residents/index.html",
-    "personnel/announce/current/index.html": "http://www.phila.gov/personnel/announce/current/index.html",
-    "water/pages/default.aspx": "http://phila.gov/water/pages/default.aspx",
+    "/default.aspx": "http://property.phila.gov/",
+    "/revenue/realestatetax/default.aspx": "http://www.phila.gov/revenue/realestatetax/default.aspx",
+    "/pages/default.aspx": "http://phila.gov/pages/default.aspx",
+    "/paymentcenter/gateway1/initiatepurchase.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
+    "/paymentcenter/accountlookup/default.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
+    "/residents/index.html": "http://phila.gov/residents/index.html",
+    "/personnel/announce/current/index.html": "http://www.phila.gov/personnel/announce/current/index.html",
+    "/water/pages/default.aspx": "http://phila.gov/water/pages/default.aspx",
 "personnel/jobs.html": "http://phila.gov/personnel/jobs.html",
 
     // for 7/30 days tabs
@@ -21,8 +21,8 @@
   };
 
   var title_exceptions = {
-    "paymentcenter/accountlookup/default.aspx": "Account Lookup - City of Philadelphia",
-    "default.aspx": "City of Philadelphia | Homepage",
+    "/paymentcenter/accountlookup/default.aspx": "Account Lookup - City of Philadelphia",
+    "/default.aspx": "City of Philadelphia | Homepage",
     "http://personnel/announce/current/index.html": "City of Philadelphia | Human Resources",
     
   };
@@ -808,7 +808,7 @@
   // otherwise, let's get fancy
   else {
     var styles = {
-      big: "font-size: 24pt; font-weight: bold;",
+      big: "font-size: 24pt; font-weight: bold; color: #027ea4",
       medium: "font-size: 10pt",
       medium_bold: "font-size: 10pt; font-weight: bold",
       medium_link: "font-size: 10pt; font-weight: bold; color: #027ea4",
