@@ -7,27 +7,23 @@
 
     Hi! Welcome to our source code.
 
-    This dashboard uses code developed by the Digital Analytics Program, a US government team inside the General Services
-    Administration, an independent federal agency. It was built largely by 18F, another GSA team.
+    This dashboard uses code developed by the Digital Analytics Program, a US government team inside the General Services Administration, an independent federal agency. It was built largely by 18F, another GSA team.
 
-    Beginning in December 2014, the City of Philadelphia's Office of Innovation and Technology has been working to integrate
-    city-wide web analytics in the same way. Much like the our compatriots at the federal level, it is a work in progress, with
+    Beginning in December 2014, the City of Philadelphia's Office of Innovation and Technology has been working to integrate city-wide web analytics in the same way. Much like the our compatriots at the federal level, it is a work in progress, with
     over 56 departments to coordinate
-
 
     For a detailed tech breakdown of how 18F built this site:
     https://18f.gsa.gov/2015/03/19/how-we-built-analytics-usa-gov/
 
     And read the City of Philadelphia's web reporting initiative here:
 
-     In part, we'll be using these analytics to help inform our iterative, public effort to redesign the city's
-    website to better serve the needs of residents. Follow our progress at:
+     In part, we'll be using these analytics to help inform our iterative, public effort to redesign the city's website to better serve the needs of residents. Follow our progress at:
      http://alpha.phila.gov
 
 
     This is a fully open source project, and your contributions are welcome.
 
-    Frontend static site: https://github.com/CityofPhiladelphia/analytics.phila.gov
+    Front-end static site: https://github.com/CityofPhiladelphia/analytics.phila.gov
     Backend data reporting: https://github.com/CityofPhiladelphia/analytics-reporter
 
     -->
@@ -38,7 +34,7 @@
     <meta name="twitter:site" content="@philadelphiagov">
     <meta name="twitter:creator" content="@philadelphiagov">
     <meta property="og:type" content="website" />
-
+    <link rel="shortcut icon" type="image/x-icon" href="//s3.amazonaws.com/phila/favicon.ico">
     <meta property="og:url" content="http://analytics.phila.gov" />
     <link rel="canonical" href="http://analytics.phila.gov" />
 
@@ -63,7 +59,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!--pattern stylesheet includes foundation css -->
-    <link rel="stylesheet" href="//cityofphiladelphia.github.io/patterns/dist/0.6.0/css/patterns.css">
+    <link rel="stylesheet" href="https://cityofphiladelphia.github.io/patterns/dist/0.6.0/css/patterns.css">
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js?ver=2.8.3'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,7 +92,7 @@
         <header class="site-header app" role="banner">
           <div class="row">
             <div class="small-24 medium-24 column">
-              <a href="http://alpha.phila.gov"><img src="//cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale left" alt="City of Philadelphia"></a>
+              <a href="http://alpha.phila.gov"><img src="https://cityofphiladelphia.github.io/patterns/images/city-of-philadelphia-logo.png" class="logo no-scale left" alt="City of Philadelphia"></a>
 
               <h1 class="page-title"><a href="#">analytics<a href="http://www.phila.gov">.phila.gov</a></h1>
               <a id="about" href="#explanation" class="right">About this site</a>
@@ -231,11 +227,11 @@
                 <section id="explanation" class="large-18 columns">
                     <h3>About this Site</h3>
                     <p>
-                        This data provides a window into how people are interacting with the city online. The data comes from a unified Google Analytics account for City of Philadelphia city agencies. This program helps city agencies understand how people find, access, and use city services online. The program does not track individuals, and anonymizes the IP addresses of visitors.
+                        This data provides a window into how people are interacting with the city online. The data comes from a unified Google Analytics account for City of Philadelphia city offices and agencies. This program helps city employees understand how people find, access, and use city services online. The program does not track individual users, and anonymizes the IP addresses of visitors.
                     </p>
 
                     <p>
-                        Not every city website is represented in this data. Currently, the Office of Innovation and technology collects web traffic from almost <a href=""> [n] city sites</a>, including every [department], out of <a href="">about [n] domains</a> total. We continue to pursue and add more sites frequently; to add your agency or office's site, <a href="mailto:data@phila.gov">email Data Services in the Office of Innovation and Technology</a>.
+                        Not every city website is represented in this data. Currently, the <a href="http://phila.gov/data">Data Services</a> collects web traffic from almost 30 city sites. All told, there are about 56 city departments and offices, as well as many non-phila.gov domain names yet to include. We continue to pursue and add more sites frequently; to add your agency or office's site, <a href="mailto:data@phila.gov">email Data Services in the Office of Innovation and Technology</a>.
                     </p>
 
                     <p>
