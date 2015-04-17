@@ -5,17 +5,15 @@
   // that happens to have trouble keeping permalinks.
   var exceptions = {
     // for the Now tab
-    "applicationmanager.gov/application.aspx": "https://applicationmanager.gov",
-    "forecast.weather.gov/mapclick.php": "http://forecast.weather.gov/",
-    "egov.uscis.gov/casestatus/mycasestatus.do": "https://egov.uscis.gov/casestatus/",
-    "irs.gov/individuals/electronic-filing-pin-request": " http://www.irs.gov/Individuals/Electronic-Filing-PIN-Request",
-    "ebenefits.va.gov/ebenefits-portal/ebenefits.portal": "https://www.ebenefits.va.gov/ebenefits-portal/ebenefits.portal",
-    "irs.gov/forms-&-pubs": "http://www.irs.gov/Forms-&-Pubs",
-    "ebenefits.va.gov/ebenefits/homepage": "https://www.ebenefits.va.gov/ebenefits/homepage",
-
-    // individual petitions
-    "petitions.whitehouse.gov/petition/file-charges-against-47-us-senators-violation-logan-act-attempting-undermine-nuclear-agreement/nkqnpjs9": "https://petitions.whitehouse.gov/petition/file-charges-against-47-us-senators-violation-logan-act-attempting-undermine-nuclear-agreement/",
-    "petitions.whitehouse.gov/petition/take-out-alejandro-garcía-padilla-governorship-puerto-rico-now/b0jgb8sv" : "https://petitions.whitehouse.gov/petition/take-out-alejandro-garc%C3%ADa-padilla-governorship-puerto-rico-now/",
+    "default.aspx": "http://property.phila.gov/",
+    "revenue/realestatetax/default.aspx": "http://www.phila.gov/revenue/realestatetax/default.aspx",
+    "pages/default.aspx": "http://phila.gov/pages/default.aspx",
+    "paymentcenter/gateway1/initiatepurchase.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
+    "paymentcenter/accountlookup/default.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
+    "residents/index.html": "http://phila.gov/residents/index.html",
+    "personnel/announce/current/index.html": "http://www.phila.gov/personnel/announce/current/index.html",
+    "water/pages/default.aspx": "http://phila.gov/water/pages/default.aspx",
+"personnel/jobs.html": "http://phila.gov/personnel/jobs.html",
 
     // for 7/30 days tabs
     "egov.uscis.gov": "https://egov.uscis.gov/casestatus/",
@@ -23,7 +21,10 @@
   };
 
   var title_exceptions = {
-    "forecast.weather.gov/mapclick.php": "National Weather Service - Forecasts by Region",
+    "paymentcenter/accountlookup/default.aspx": "Account Lookup - City of Philadelphia",
+    "default.aspx": "City of Philadelphia | Homepage",
+    "http://personnel/announce/current/index.html": "City of Philadelphia | Human Resources",
+    
   };
 
 
