@@ -5,7 +5,6 @@
   // that happens to have trouble keeping permalinks.
   var exceptions = {
     // for the Now tab
-    "/default.aspx": "http://property.phila.gov/",
     "/revenue/realestatetax/default.aspx": "http://www.phila.gov/revenue/realestatetax/default.aspx",
     "/pages/default.aspx": "http://phila.gov/pages/default.aspx",
     "/paymentcenter/gateway1/initiatepurchase.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
@@ -13,7 +12,8 @@
     "/residents/index.html": "http://phila.gov/residents/index.html",
     "/personnel/announce/current/index.html": "http://www.phila.gov/personnel/announce/current/index.html",
     "/water/pages/default.aspx": "http://phila.gov/water/pages/default.aspx",
-"personnel/jobs.html": "http://phila.gov/personnel/jobs.html",
+    "personnel/jobs.html": "http://phila.gov/personnel/jobs.html",
+  
 
     // for 7/30 days tabs
     "egov.uscis.gov": "https://egov.uscis.gov/casestatus/",
@@ -22,7 +22,6 @@
 
   var title_exceptions = {
     "/paymentcenter/accountlookup/default.aspx": "Account Lookup - City of Philadelphia",
-    "/default.aspx": "City of Philadelphia | Homepage",
     "http://personnel/announce/current/index.html": "City of Philadelphia | Human Resources",
     
   };
