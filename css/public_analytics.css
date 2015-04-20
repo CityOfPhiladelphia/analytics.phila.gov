@@ -31,9 +31,6 @@ footer .row {
 a, a:visited {
   color: #027ea4;!important; }
 
-#usa_dot_gov_header a, #usa_dot_gov_header a:visited {
-  color: #fff; }
-
 .site-header {
     padding-top: 15px;
 }
@@ -224,27 +221,28 @@ section {
   #secondary_data h5 {
     margin-top: 0; }
 
-#explanation, #data_download, #agencies {
+#explanation, #data_download  {
   border-top: 1px solid #dbe1e3;
   font-size: 90%;
   line-height: 1.6em; }
-  #explanation li, #data_download li, #agencies li {
+  #explanation li, #data_download li {
     margin: 1em 0; }
 
-#explanation, #agencies {
+#explanation {
   /*float: left;*/
   display: block;
   margin-right: 0%;
+  padding-left: 2em;
   width: 64.28571%; }
-  #explanation:last-child, #agencies:last-child {
+  #explanation:last-child {
     margin-right: 0; }
   @media screen and (max-width: 768px) {
-    #explanation, #agencies {
+    #explanation  {
     /*  float: left;*/
       display: block;
       margin-right: 0%;
       width: 100%; }
-      #explanation:last-child, #agencies:last-child {
+      #explanation:last-child {
         margin-right: 0; } }
 
 #explanation{
