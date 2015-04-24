@@ -4,20 +4,14 @@
   // infrastructure. we will not add exceptions for any site
   // that happens to have trouble keeping permalinks.
   var exceptions = {
-    // for the Now tab
-    "/revenue/realestatetax/default.aspx": "http://www.phila.gov/revenue/realestatetax/default.aspx",
-    "/pages/default.aspx": "http://phila.gov/pages/default.aspx",
-    "/paymentcenter/gateway1/initiatepurchase.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
-    "/paymentcenter/accountlookup/default.aspx": "https://secure.phila.gov/PaymentCenter/AccountLookup/",
-    "/residents/index.html": "http://phila.gov/residents/index.html",
-    "/personnel/announce/current/index.html": "http://www.phila.gov/personnel/announce/current/index.html",
-    "/water/pages/default.aspx": "http://phila.gov/water/pages/default.aspx",
-    "personnel/jobs.html": "http://phila.gov/personnel/jobs.html",
-  
+    // for the Top 20 Now tab ================================>
+    // TODO: solve for 
+    //"/revenue/realestatetax/default.aspx": "http://www.phila.gov/revenue/realestatetax/default.aspx",
+   
 
-    // for 7/30 days tabs
-    "egov.uscis.gov": "https://egov.uscis.gov/casestatus/",
-    "wrh.noaa.gov": "http://www.wrh.noaa.gov"
+    // for Top 20 7/30 days tabs =============================>
+   // "egov.uscis.gov": "https://egov.uscis.gov/casestatus/",
+  
   };
 
   var title_exceptions = {
@@ -227,7 +221,7 @@
               return d.page_title;
             })
             .attr("href", function(d) {
-              return exceptions[d.page] || ("http://" + d.page);
+              return exceptions[d.page] || ("http://" + d.domain + d.page);
             })
             .text(function(d) {
               return title_exceptions[d.page] || d.page_title;
