@@ -793,7 +793,7 @@
   if (window._ie) {
     console.log("Yo! Please poke around to your heart's content.");
     console.log("");
-    console.log("If you find a bug or something, please report it at https://github.com/GSA/analytics.usa.gov/issues");
+    console.log("If you find a bug or something, please report it at https://github.com/CityofPhiladelphia/analytics.phila.gov/issues");
     console.log("Like it, but want a different front-end? The data reporting is its own tool: https://github.com/18f/analytics-reporter");
     console.log("This is an open source, public domain project, and your contributions are very welcome.");
   }
