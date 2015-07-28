@@ -7,7 +7,7 @@ A collaboration to publish government website analytics.
 * Install [Sass](http://sass-lang.com/), Bourbon, and Neat:
 
 ```bash
-gem install sass bourbon neat
+bundle install
 ```
 
 * To watch the Sass source for changes and build the stylesheets automatically, run:
