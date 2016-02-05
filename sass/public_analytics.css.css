@@ -1,0 +1,632 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:5700);
+/* line 4, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_box-sizing.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 11, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_box-sizing.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* line 59, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+body {
+  font-family: "Open Sans", Helvetica, arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #222;
+  background: #fff;
+  margin: 0; }
+  @media screen and (max-width: 992px) {
+    /* line 59, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    body {
+      font-size: 14px; } }
+  @media screen and (max-width: 768px) {
+    /* line 59, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    body {
+      font-size: 14px; } }
+
+/* line 75, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+a, a:visited {
+  color: #027EA4; }
+
+/* line 80, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#usa_dot_gov_header a, #usa_dot_gov_header a:visited {
+  color: #fff; }
+
+/* line 85, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+h2 {
+  font-size: 4em; }
+
+/* line 89, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+h3 {
+  font-size: 1.2em;
+  margin: 1em 0; }
+
+/* line 94, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+h4 {
+  margin: 1em 0;
+  font-size: 1.2em;
+  font-weight: 400; }
+
+/* line 100, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+h5 {
+  font-size: 0.8em;
+  font-weight: 400; }
+
+/* line 105, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+header {
+  background: #fff;
+  color: white; }
+  /* line 109, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  header .header_container {
+    max-width: 97.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em; }
+    /* line 9, /Users/lancona/Documents/Github/analytics.phila.gov/sass/bourbon/addons/_clearfix.scss */
+    header .header_container::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (max-width: 1600px) {
+      /* line 109, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      header .header_container {
+        max-width: 1600px; } }
+    @media screen and (max-width: 1200px) {
+      /* line 109, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      header .header_container {
+        max-width: 1200px; } }
+    @media screen and (max-width: 992px) {
+      /* line 109, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      header .header_container {
+        max-width: 992px; } }
+    @media screen and (max-width: 768px) {
+      /* line 109, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      header .header_container {
+        max-width: 768px; } }
+  /* line 114, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  header #color_bar {
+    background: #3A96B7;
+    height: 6px; }
+  /* line 119, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  header h1 {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 50%;
+    font-weight: 600; }
+    /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+    header h1:last-child {
+      margin-right: 0; }
+    /* line 122, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    header h1 a {
+      font-weight: 300;
+      color: white;
+      text-decoration: none; }
+    /* line 127, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    header h1 a:hover {
+      text-decoration: underline; }
+    @media screen and (max-width: 768px) {
+      /* line 119, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      header h1 {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 100%; }
+        /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+        header h1:last-child {
+          margin-right: 0; } }
+  /* line 135, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  header #application > header {
+    height: 200px; }
+  /* line 139, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  header #about {
+    font-size: 1em;
+    font-weight: 300;
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 50%;
+    padding-top: 2em;
+    text-align: right;
+    text-decoration: none;
+    border: none; }
+    /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+    header #about:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 768px) {
+      /* line 139, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      header #about {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 100%;
+        text-align: left;
+        padding-top: 0;
+        padding-bottom: 10px; }
+        /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+        header #about:last-child {
+          margin-right: 0; } }
+  /* line 154, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  header #about:hover {
+    text-decoration: underline; }
+
+/* line 157, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+section {
+  background: #fff;
+  padding: 1em; }
+  /* line 160, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  section h2 {
+    font-size: 8em;
+    margin: 0; }
+    @media screen and (max-width: 768px) {
+      /* line 160, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      section h2 {
+        font-size: 6em; } }
+  /* line 167, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  section h3 {
+    margin: 10px 0; }
+
+/* line 172, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#realtime {
+  color: #027EA4; }
+  @media screen and (max-width: 768px) {
+    /* line 172, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    #realtime {
+      font-size: 12px; } }
+
+/* line 179, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.container {
+  max-width: 97.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  background: #fff; }
+  /* line 9, /Users/lancona/Documents/Github/analytics.phila.gov/sass/bourbon/addons/_clearfix.scss */
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (max-width: 1600px) {
+    /* line 179, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .container {
+      max-width: 1600px; } }
+  @media screen and (max-width: 1200px) {
+    /* line 179, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .container {
+      max-width: 1200px; } }
+  @media screen and (max-width: 992px) {
+    /* line 179, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .container {
+      max-width: 992px; } }
+  @media screen and (max-width: 768px) {
+    /* line 179, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .container {
+      max-width: 768px; } }
+
+/* line 187, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#main_data {
+  border-right: 1px solid #e4e4e4;
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 64.28571%; }
+  /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+  #main_data:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 187, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    #main_data {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      border-right: none; }
+      /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+      #main_data:last-child {
+        margin-right: 0; } }
+
+/* line 198, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.visits_today h3 {
+  display: block;
+  height: 2.5rem;
+  margin-bottom: 0; }
+
+/* line 203, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.visits_today h4 {
+  display: block;
+  text-align: right;
+  margin-top: -2.5rem;
+  font-size: 1.0em;
+  color: #222; }
+
+/* line 212, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#secondary_data {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 35.71429%; }
+  /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+  #secondary_data:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 212, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    #secondary_data {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      border-top: 1px solid #e4e4e4;
+      border-left: none;
+      border-right: none; }
+      /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+      #secondary_data:last-child {
+        margin-right: 0; } }
+  /* line 221, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #secondary_data h3 {
+    margin-bottom: 0; }
+  /* line 224, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #secondary_data h5 {
+    margin-top: 0; }
+
+/* line 229, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#explanation, #data_download, #agencies {
+  border-top: 1px solid #e4e4e4;
+  font-size: 90%;
+  line-height: 1.6em; }
+  /* line 233, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #explanation li, #data_download li, #agencies li {
+    margin: 1em 0; }
+
+/* line 238, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#explanation, #agencies {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 64.28571%; }
+  /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+  #explanation:last-child, #agencies:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 238, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    #explanation, #agencies {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%; }
+      /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+      #explanation:last-child, #agencies:last-child {
+        margin-right: 0; } }
+
+/* line 246, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#data_download {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 35.71429%; }
+  /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+  #data_download:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 246, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    #data_download {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%; }
+      /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+      #data_download:last-child {
+        margin-right: 0; } }
+
+/* line 253, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.section_headline {
+  padding: 0.1em 1em;
+  border-top: 1px solid #e4e4e4; }
+  @media screen and (max-width: 768px) {
+    /* line 253, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .section_headline {
+      border-bottom: none; } }
+
+/* line 261, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.section_subheadline {
+  padding: 0.5em 1em;
+  border-top: 1px solid #e4e4e4;
+  text-align: center;
+  font-size: 1.5em; }
+  /* line 266, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .section_subheadline #total_visitors {
+    font-weight: 600; }
+
+/* line 271, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.three_column {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 33.33333%; }
+  /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+  .three_column:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 271, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .three_column {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid #e4e4e4; }
+      /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+      .three_column:last-child {
+        margin-right: 0; } }
+  /* line 280, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .three_column h4 {
+    text-align: center;
+    margin: 0;
+    font-size: 90%; }
+  /* line 285, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .three_column h5 {
+    margin-top: 0;
+    text-align: center; }
+
+/* line 291, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#realtime {
+  text-align: center;
+  padding-top: 0em;
+  padding-bottom: 2em; }
+  /* line 295, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #realtime .chart_subtitle {
+    font-size: 2.1em;
+    font-weight: 300; }
+
+/* line 301, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#coming_soon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: #027EA4;
+  color: white;
+  vertical-align: middle;
+  padding: 10em; }
+  /* line 313, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #coming_soon a {
+    color: white; }
+  /* line 317, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #coming_soon h1 {
+    font-size: 4em; }
+  /* line 321, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #coming_soon h1, #coming_soon h2 {
+    text-align: center;
+    font-weight: 300; }
+  /* line 325, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #coming_soon h2 {
+    font-size: 2em;
+    margin: 2em auto; }
+  @media screen and (max-width: 768px) {
+    /* line 301, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    #coming_soon {
+      font-size: 12px;
+      padding: 2em; } }
+
+/* line 338, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#chart_windows .bar-chart .bin,
+#chart_ie .bar-chart .bin {
+  margin-left: 2em;
+  margin-bottom: 0rem; }
+  /* line 342, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  #chart_windows .bar-chart .bin .bar,
+  #chart_ie .bar-chart .bin .bar {
+    display: none; }
+
+/* line 348, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#time_series {
+  padding: 0 1em; }
+
+/* line 352, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#time_series svg {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  max-height: 300px; }
+
+/* line 360, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#current_visitors {
+  font-weight: 600;
+  text-align: center; }
+
+/* line 366, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#top_100_table h3 {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 40%; }
+  /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+  #top_100_table h3:last-child {
+    margin-right: 0; }
+
+/* line 369, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+#top_100_table h5 {
+  color: #222;
+  font-weight: 300; }
+
+/* line 376, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.top-pages .bar-chart {
+  margin-top: 0; }
+
+/* line 381, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+figure {
+  margin: 0; }
+
+/* line 385, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+ul.pills {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 60%;
+  display: inline-block;
+  border-right: 1px solid #e4e4e4;
+  border-left: 1px solid #e4e4e4; }
+  /* line 9, /Users/lancona/Documents/Github/analytics.phila.gov/sass/bourbon/addons/_clearfix.scss */
+  ul.pills::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 87, /Users/lancona/Documents/Github/analytics.phila.gov/sass/neat/grid/_span-columns.scss */
+  ul.pills:last-child {
+    margin-right: 0; }
+  /* line 393, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  ul.pills li {
+    width: 33.3333%; }
+  /* line 397, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  ul.pills, ul.pills > li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block; }
+  /* line 404, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  ul.pills {
+    margin: .60rem 0; }
+  /* line 408, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  ul.pills > li {
+    float: left; }
+    /* line 411, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    ul.pills > li > a {
+      color: #027EA4;
+      background: #fff;
+      width: 100%;
+      text-align: center;
+      font-weight: 300;
+      font-size: 0.8em;
+      display: inline-block;
+      padding: 0.32em 0em;
+      text-decoration: none;
+      border-top: 1px solid #e4e4e4;
+      border-bottom: 1px solid #e4e4e4;
+      border-right: 1px solid #e4e4e4; }
+      /* line 426, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      ul.pills > li > a:hover {
+        text-decoration: underline; }
+      /* line 430, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+      ul.pills > li > a[aria-selected='true'] {
+        color: #fff;
+        background: #3A96B7; }
+    /* line 436, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    ul.pills > li:last-child > a {
+      border-right: none; }
+
+/* line 442, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.bar-chart {
+  margin: 1rem 0;
+  position: relative;
+  font-size: 90%; }
+  /* line 447, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .bar-chart .bar-chart {
+    font-size: 80%; }
+  /* line 451, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .bar-chart .bin {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 1rem 0; }
+    /* line 9, /Users/lancona/Documents/Github/analytics.phila.gov/sass/bourbon/addons/_clearfix.scss */
+    .bar-chart .bin::after {
+      clear: both;
+      content: "";
+      display: table; }
+    /* line 457, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .bar-chart .bin .bar:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      background: #f9f9f9;
+      top: 0;
+      left: 100%;
+      width: 1000px;
+      height: 100%;
+      z-index: 1; }
+  /* line 470, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .bar-chart .bar {
+    height: .5rem;
+    background: #3A96B7;
+    position: relative;
+    z-index: 2;
+    min-width: 1px;
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    transition: width 0.5s linear; }
+  /* line 480, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .bar-chart .label {
+    white-space: nowrap;
+    height: 1.5rem;
+    margin-right: 4em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #fff !important;
+    color: #666 !important;
+    font-size: 0.6875rem !important; }
+    /* line 492, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+    .bar-chart .label a {
+      text-decoration: none; }
+  /* line 497, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  .bar-chart .value {
+    text-align: right;
+    height: 1rem;
+    white-space: nowrap;
+    margin-top: -1.5rem;
+    margin-bottom: .45rem; }
+
+/* line 508, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+g.axis path,
+g.axis line {
+  fill: none;
+  stroke: none; }
+
+/* line 513, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+g.axis .tick text {
+  fill: #222;
+  font-size: .75rem; }
+
+/* line 520, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.time-series rect {
+  fill: #3A96B7;
+  stroke: #fff;
+  stroke-width: 1; }
+
+/* line 526, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+.time-series text.label {
+  fill: #222;
+  font-size: .6rem; }
+
+/* line 536, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+figure figure h4 {
+  display: none; }
+
+/* line 540, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+figure figure .bar-chart {
+  margin: .5rem 0; }
+  /* line 543, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  figure figure .bar-chart .bin {
+    margin-bottom: .5rem; }
+
+/* line 549, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+*[data-block] {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.5s;
+  -moz-transition: opacity 0.3s ease-in 0.5s;
+  transition: opacity 0.3s ease-in 0.5s; }
+  /* line 556, /Users/lancona/Documents/Github/analytics.phila.gov/sass/public_analytics.css.scss */
+  *[data-block].loading {
+    opacity: .8; }
+
+/*# sourceMappingURL=public_analytics.css.css.map */

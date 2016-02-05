@@ -221,7 +221,8 @@
               return d.page_title;
             })
             .attr("href", function(d) {
-              return exceptions[d.page] || ("http://" + d.domain + d.page);
+//          debugger;
+              return exceptions[d.page] || ("http://" + d.page);
             })
             .text(function(d) {
               return title_exceptions[d.page] || d.page_title;
